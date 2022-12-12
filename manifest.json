@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "version": "1.0",
     "name": "Fetch folder",
-    "description": "Opens the currently reviewed folder",
+    "description": "Opens the currently reviewed student dropbox folder",
     "permissions": ["tabs","storage", "activeTab", "scripting"],
     "background": {
         "service_worker": "./backgroundPage.js"
@@ -17,9 +17,15 @@
 
     "action": {
         "default_popup": "./popup.html",
-        "default_title": "StudentWatch",
-        "default_icon": "./icon.png"
-    }
+        "default_title": "StudentWatch"
+       
+    },
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
 
 
     

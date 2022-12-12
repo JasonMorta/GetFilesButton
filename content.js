@@ -46,7 +46,7 @@ for (let i = 0; i < data.length; i++) {
   } else if (PDS.test(data[i].textContent)) {
     student.course = "Python for Data Science Bootcamp";
   } else if (IP.test(data[i].textContent)) {
-    student.course = "Intro to Programming Bootcamp";
+    student.course = "1%20-%20Introduction%20to%20programming";
   }
 
   //Get student task number
@@ -63,7 +63,7 @@ for (let i = 0; i < data.length; i++) {
 //this object need to be sent to the extension          
 console.log(student.course);
 //https://www.dropbox.com/work/HyperionDev%20Reviewers/NA22110004668/Software%20Engineer%20Bootcamp
-//https://www.dropbox.com/work/HyperionDev%20Reviewers/NA22110004668/Software%20Engineering%20Bootcamp
+//https://www.dropbox.com/work/HyperionDev%20Reviewers/AB22110005432/Intro%20to%20Programming%20Bootcamp
 
 let dropboxBtn = `<a 
     class="btn bounce-top"
