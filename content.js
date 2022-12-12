@@ -33,20 +33,20 @@ for (let i = 0; i < data.length; i++) {
 
   //Get student number
   if (data[i].textContent.search("Student number:") != -1) {
-    student.number = data[i].textContent.replace("Student number:", "");
+    student.number = data[i].textContent.replace("Student number:", "").trim();
   }
   //console.log(data[i].textContent);
   //Get student course names
   if (DS.test(data[i].textContent)) {
-    student.course = "Data Science";
+    student.course = "Data Science Bootcamp";
   } else if (SE.test(data[i].textContent)) {
-    student.course = "Software Engineering";
+    student.course = "Software Engineer Bootcamp";
   } else if (WD.test(data[i].textContent)) {
-    student.course = "Web Development";
+    student.course = "Web Development Bootcamp";
   } else if (PDS.test(data[i].textContent)) {
-    student.course = "Python for Data Science";
+    student.course = "Python for Data Science Bootcamp";
   } else if (IP.test(data[i].textContent)) {
-    student.course = "Intro to Programming";
+    student.course = "Intro to Programming Bootcamp";
   }
 
   //Get student task number
@@ -61,12 +61,14 @@ for (let i = 0; i < data.length; i++) {
 
 //finished student object
 //this object need to be sent to the extension          
-console.log(student);
-
+console.log(student.course);
+//https://www.dropbox.com/work/HyperionDev%20Reviewers/NA22110004668/Software%20Engineer%20Bootcamp
+//https://www.dropbox.com/work/HyperionDev%20Reviewers/NA22110004668/Software%20Engineering%20Bootcamp
 
 let dropboxBtn = `<a 
-    class="btn bounce-top" 
-    href="" 
+    class="btn bounce-top"
+    title=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
+    href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
     target="_blank">
         OPEN DROPBOX
 </a>`
