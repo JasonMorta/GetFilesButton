@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Fetch folder",
+    "description": "Opens the currently reviewed folder",
+    "permissions": ["tabs","storage", "activeTab", "scripting"],
+    "background": {
+        "service_worker": "./backgroundPage.js"
+    },
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js": ["./content.js"],
+            "css": ["./style.css"]
+        }
+    ],
+
+    "action": {
+        "default_popup": "./popup.html",
+        "default_title": "StudentWatch",
+        "default_icon": "./icon.png"
+    }
+
+
+    
+}
