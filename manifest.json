@@ -3,7 +3,7 @@
     "version": "1.0",
     "name": "Student File Sniffer (SFS)",
     "author": "J.Morta",
-    "description": "Opens the currently reviewed student dropbox folder",
+    "description": "Opens the current student dropbox folder",
     "permissions": ["tabs","storage", "activeTab", "scripting"],
     "background": {
         "service_worker": "./backgroundPage.js"
