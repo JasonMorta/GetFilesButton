@@ -11,7 +11,6 @@ let student = {
 }
 
 
-
 let studentNumber = "HM22100004151"
 
 //https://www.dropbox.com/search/work?path=%2F&query=HM22100004151&search_token=%2BsmQ2ZuDJX3PDBpWgfFRzx84oCyqx%2BqCmK540oRKRXM%3D&typeahead_session_id=16058840389534903632260521497123
@@ -26,7 +25,7 @@ let IP = /Intro to Programming/i
 
 //All student info is in all the h2 elements
 const data = document.getElementsByTagName("h6");
-console.log('data', data)
+//console.log('data', data)
 
 //loop over all the h6 elements and extract the needed info to build student variable
 for (let i = 0; i < data.length; i++) {
@@ -67,7 +66,7 @@ for (let i = 0; i < data.length; i++) {
 
 //finished student object
 //this object need to be sent to the extension          
-console.log(student);
+//console.log(student);
 //https://www.dropbox.com/work/HyperionDev%20Reviewers/NA22110004668/Software%20Engineer%20Bootcamp
 //https://www.dropbox.com/work/HyperionDev%20Reviewers/AB22110005432/Intro%20to%20Programming%20Bootcamp
 
