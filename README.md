@@ -30,8 +30,6 @@ speeding up the process of needing to go to dropbox, and searching for the stude
 **Client:** HTML/CSS, JavaScript, Chrome API
 
 
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
