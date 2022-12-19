@@ -73,8 +73,8 @@ console.log(student);
 
 let dropboxBtn = `<a 
     class="btn bounce-top"
-    title=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
-    href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
+    title=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/`} 
+    href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/`} 
     target="_blank">
         OPEN DROPBOX
 </a>`
