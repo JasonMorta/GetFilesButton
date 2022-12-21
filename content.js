@@ -73,8 +73,8 @@ for (let i = 0; i < data.length; i++) {
 
 let dropboxBtn = `<a 
     class="btn bounce-top"
-    title=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/`} 
-    href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/`} 
+    title=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
+    href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
     target="_blank">
         OPEN DROPBOX
 </a>`
