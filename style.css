@@ -12,6 +12,121 @@
 	        animation: bounce-top 0.9s both;
 }
 
+
+
+.dbx-btn-container{
+        position: relative;
+        width: -moz-fit-content;
+        width: fit-content;
+        transition: .2s ease-out;
+      }
+      
+      .dbx-btn {
+        background-color: #57cea0;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+       
+        cursor: pointer;
+        z-index: 1;
+        
+      }
+      
+      
+      .dropdown-content {
+        position: absolute;
+        transform: translate(-121px, -7px);
+        min-width: 160px;
+        position: absolute;
+        top: 15px;
+          right: -160px;
+          transition: .1s ease-out;
+          overflow: hidden;
+          z-index: -1;
+          height: 35px;
+          opacity: 0;
+      
+      }
+      
+      .dropdown-content a {
+        color: black;
+        transform: translate(-0px, -7px) scale(.5);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: #69d3aa;
+        border-radius: 30px;
+        margin: 5px 0px;
+        transition: .2s ease-out;
+        top: 0;
+        left: 0;
+        transition: .2s ease-out;
+        position: absolute;
+      }
+      
+      .dropdown-content:hover {
+        transition: .2s ease-out;
+        top: -38px;
+        opacity:1;
+        transition: .2s ease-out;
+        overflow: hidden;
+        z-index: 1;
+        height: 146px;
+        transform: translate(0px, -11px) scale(1);
+      }
+      
+      .dbx-btn:hover ~ .dropdown-content a{
+        position: relative;
+        transform: translate(0px, 0px) scale(1);
+      }
+      
+      .dbx-btn:hover ~ .dropdown-content {
+        /* transition: .2s ease-out; */
+        top: -38px;
+        opacity:1;
+        /* transition: .2s ease-out; */
+        overflow: hidden;
+        z-index: 1;
+        height: 146px;
+        transform: translate(0px, -11px) scale(1);
+      }
+      
+      
+      
+      
+      .dropdown-content:hover  a {
+        transform: translate(0px, 0px) scale(1);
+        transition: .2s ease-out;
+        position: relative;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #2196f3;
+        
+      }
+      
+      .dropdown-content span {
+        font-size: 10px;
+      }
+      
+      .dbx-btn i {
+        margin-left: 5px;
+      }
+      
+      
+      
+      
+      /* Animation */
+      
+
+
+
+
 /**
  * ----------------------------------------
  * animation bounce-top
