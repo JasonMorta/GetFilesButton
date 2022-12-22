@@ -75,13 +75,12 @@ console.log(student.task);
 
 let dropboxBtn = `
   <div class="dbx-btn-container bounce-top">
-                    <button class="dbx-btn">Dropbox
-                      <i class="fa fa-caret-down"></i>
-                    </button>
+                    <a class="btn dbx-btn">Dropbox
+                    </a>
                     <div class="dropdown-content">
-                      <a   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}   >Find Student <span>(All)</span></a>
-                      <a   href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}  >Main Folder <span>(DFE only)</span></a>
-                      <a   href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}  >Task Folder <span>(DFE only)</span></a>
+                      <a   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
+                      <a   href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}   target="_blank">Course Folder <span>(DFE only)</span></a>
+                      <a   href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}/${student.task}`}   target="_blank">Task Folder <span>(DFE only)</span></a>
                   </div>
   </div>`;
 

@@ -1,10 +1,15 @@
 .my-body {
-    width: 300px;
+    width: 18.75rem;
     background-color: #57cea0;
 }
 
+.dbx-btn {
+        margin: 0 !important;
+        color: white;
+}
+
 .my-ul {
-    padding-inline-start: 15px
+    padding-inline-start: 0.9375rem
 } 
  
  .bounce-top {
@@ -16,6 +21,7 @@
 
 .dbx-btn-container{
         position: relative;
+        margin: auto;
         width: -moz-fit-content;
         width: fit-content;
         transition: .2s ease-out;
@@ -23,12 +29,12 @@
       
       .dbx-btn {
         background-color: #57cea0;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
+        color: white !important;
+        padding: 1rem;
+        font-size: 1rem;
         border: none;
         outline: none;
-       
+        min-width: 7.3125rem;
         cursor: pointer;
         z-index: 1;
         
@@ -37,31 +43,32 @@
       
       .dropdown-content {
         position: absolute;
-        transform: translate(-121px, -7px);
-        min-width: 160px;
+        transform: translate(-7.5625rem, -0.4375rem);
+        min-width: 10rem;
         position: absolute;
-        top: 15px;
-          right: -160px;
+        top: 0.9375rem;
+          right: -10rem;
           transition: .1s ease-out;
           overflow: hidden;
           z-index: -1;
-          height: 35px;
+          height: 2.1875rem;
           opacity: 0;
       
       }
       
       .dropdown-content a {
         color: black;
-        transform: translate(-0px, -7px) scale(.5);
-        padding: 12px 16px;
+        margin: 0.3125rem !important;
+        transform: translate(-0rem, -0.4375rem) scale(.5);
+        padding: 0.75rem 1rem;
         text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
         background-color: #69d3aa;
-        border-radius: 30px;
-        margin: 5px 0px;
+        border-radius: 1.875rem !important;
+        margin: 0.3125rem 0rem;
         transition: .2s ease-out;
         top: 0;
         left: 0;
@@ -71,52 +78,52 @@
       
       .dropdown-content:hover {
         transition: .2s ease-out;
-        top: -38px;
         opacity:1;
         transition: .2s ease-out;
         overflow: hidden;
         z-index: 1;
-        height: 146px;
-        transform: translate(0px, -11px) scale(1);
+        top: -3.625rem;
+        right:  -12.75rem;
+        height: 10.3125rem;
+        transform: translate(0rem, -0.6875rem) scale(1);
       }
       
       .dbx-btn:hover ~ .dropdown-content a{
         position: relative;
-        transform: translate(0px, 0px) scale(1);
+        transform: translate(0rem, 0rem) scale(1);
       }
       
       .dbx-btn:hover ~ .dropdown-content {
         /* transition: .2s ease-out; */
-        top: -38px;
         opacity:1;
         /* transition: .2s ease-out; */
         overflow: hidden;
         z-index: 1;
-        height: 146px;
-        transform: translate(0px, -11px) scale(1);
+        top: -3.625rem;
+        right:  -12.75rem;
+        height: 10.5rem;
+        transform: translate(0rem, -0.6875rem) scale(1);
       }
       
-      
-      
-      
+
       .dropdown-content:hover  a {
-        transform: translate(0px, 0px) scale(1);
+        transform: translate(0rem, 0rem) scale(1);
         transition: .2s ease-out;
         position: relative;
+      
       }
       
       .dropdown-content a:hover {
-        background-color: #2196f3;
+        background-color: #2196f3 !important;
+        text-decoration: none !important;
         
       }
       
       .dropdown-content span {
-        font-size: 10px;
+        font-size: 0.625rem;
       }
       
-      .dbx-btn i {
-        margin-left: 5px;
-      }
+
       
       
       
@@ -134,8 +141,8 @@
  */
  @-webkit-keyframes bounce-top {
     0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
+      -webkit-transform: translateY(-2.8125rem);
+              transform: translateY(-2.8125rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
       opacity: 1;
@@ -144,26 +151,26 @@
       opacity: 1;
     }
     40% {
-      -webkit-transform: translateY(-24px);
-              transform: translateY(-24px);
+      -webkit-transform: translateY(-1.5rem);
+              transform: translateY(-1.5rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     65% {
-      -webkit-transform: translateY(-12px);
-              transform: translateY(-12px);
+      -webkit-transform: translateY(-0.75rem);
+              transform: translateY(-0.75rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     82% {
-      -webkit-transform: translateY(-6px);
-              transform: translateY(-6px);
+      -webkit-transform: translateY(-0.375rem);
+              transform: translateY(-0.375rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     93% {
-      -webkit-transform: translateY(-4px);
-              transform: translateY(-4px);
+      -webkit-transform: translateY(-0.25rem);
+              transform: translateY(-0.25rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
@@ -171,14 +178,14 @@
     55%,
     75%,
     87% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+      -webkit-transform: translateY(0rem);
+              transform: translateY(0rem);
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
     }
     100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+      -webkit-transform: translateY(0rem);
+              transform: translateY(0rem);
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
       opacity: 1;
@@ -186,8 +193,8 @@
   }
   @keyframes bounce-top {
     0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
+      -webkit-transform: translateY(-2.8125rem);
+              transform: translateY(-2.8125rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
       opacity: 1;
@@ -196,26 +203,26 @@
       opacity: 1;
     }
     40% {
-      -webkit-transform: translateY(-24px);
-              transform: translateY(-24px);
+      -webkit-transform: translateY(-1.5rem);
+              transform: translateY(-1.5rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     65% {
-      -webkit-transform: translateY(-12px);
-              transform: translateY(-12px);
+      -webkit-transform: translateY(-0.75rem);
+              transform: translateY(-0.75rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     82% {
-      -webkit-transform: translateY(-6px);
-              transform: translateY(-6px);
+      -webkit-transform: translateY(-0.375rem);
+              transform: translateY(-0.375rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     93% {
-      -webkit-transform: translateY(-4px);
-              transform: translateY(-4px);
+      -webkit-transform: translateY(-0.25rem);
+              transform: translateY(-0.25rem);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
@@ -223,14 +230,14 @@
     55%,
     75%,
     87% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+      -webkit-transform: translateY(0rem);
+              transform: translateY(0rem);
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
     }
     100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+      -webkit-transform: translateY(0rem);
+              transform: translateY(0rem);
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
       opacity: 1;
