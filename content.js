@@ -58,7 +58,7 @@ for (let i = 0; i < data.length; i++) {
   //Get student task number
   if (data[i].textContent.search("Task:") != -1) {
     //extracts the task number from element/string
-    student.task = data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "") <= 10 ?
+    student.task = data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "") <= 9 ?
     "T0"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", ""):
     "T"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "");
   }
