@@ -55,17 +55,24 @@ for (let i = 0; i < data.length; i++) {
     student.course = "1%20-%20Introduction%20to%20programming";
   }
 
+
+
   //Get student task number
   if (data[i].textContent.search("Task:") != -1) {
     //extracts the task number from element/string
     student.task = data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "") <= 9 ?
     "T0"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", ""):
     "T"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "");
+
+      console.log(student.task);
+    if ( student.task === "T162") {
+      student.task = "T16"
+    }
   }
 
 }
 
-console.log(student.task);
+
 
 //finished student object
 //this object need to be sent to the extension          
