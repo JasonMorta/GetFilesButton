@@ -25,7 +25,7 @@ let IP = /Intro to Programming/i
 
 //All student info is in all the h2 elements
 const data = document.getElementsByTagName("h6");
-console.log(data);
+//console.log(data);
 //console.log('data', data)
 
 //loop over all the h6 elements and extract the needed info to build student variable
@@ -102,7 +102,7 @@ let dropboxBtn = `
 // </a>`
 
 
-console.log(data[3]);
+//console.log(data[3]);
 
 data[3].insertAdjacentHTML("afterend", dropboxBtn);
 //https://www.dropbox.com/search/work?path=%2F&query=AD22110004876&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841
