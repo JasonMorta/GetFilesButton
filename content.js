@@ -64,12 +64,14 @@ for (let i = 0; i < data.length; i++) {
     "T0"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", ""):
     "T"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "");
 
-      //console.log(student.task);
-    if ( student.task === "T162" || student.task === "T161") {
-      student.task = "T16"
+      console.log('task: '+ student.task +' ',student.task.length);
+
+    if ( student.task.length > 3) {
+      student.task = student.task.slice(0,3)
+      
     }
   }
-
+  console.log('sliced student.task', student.task)
 }
 
 
