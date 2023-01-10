@@ -20,6 +20,9 @@ let studentNumber = "HM22100004151"
 let DS = /Data Science/i
 let SE = /Software Engineering/i
 let WD = /Web Development/i
+// let WDL1 = /1 - Web Development Essentials/i
+// let WDL2 = /Web Development Essentials/i
+// let WDL3 = /Web Development Essentials/i
 let PDS = /Python for Data Science/i
 let IP = /Intro to Programming/i
 
@@ -87,9 +90,9 @@ let dropboxBtn = `
                     <a class="btn dbx-btn">Dropbox
                     </a>
                     <div class="dropdown-content">
-                      <a   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
-                      <a   href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}   target="_blank">Course Folder <span>(DFE only)</span></a>
-                      <a   href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}/${student.task}`}   target="_blank">Task Folder <span>(DFE only)</span></a>
+                      <a class="dbx-btn-link"   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
+                      <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}   target="_blank">Course Folder <span>(DFE only)</span></a>
+                      <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}/${student.task}`}   target="_blank">Task Folder <span>(DFE only)</span></a>
                   </div>
   </div>`;
 

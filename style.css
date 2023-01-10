@@ -24,7 +24,8 @@
         margin: auto;
         width: -moz-fit-content;
         width: fit-content;
-        transition: .2s ease-out;
+        transition: .2s;
+        transition-delay: 1s;
       }
       
       .dbx-btn {
@@ -36,30 +37,33 @@
         outline: none;
         min-width: 7.3125rem;
         cursor: pointer;
-        z-index: 1;
-        
       }
       
       
       .dropdown-content {
+        transition: .2s;
+        transition-delay: 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         position: absolute;
         transform: translate(-7.5625rem, -0.4375rem);
         min-width: 10rem;
         position: absolute;
-        top: 0.9375rem;
+        top: 0.5rem;
           right: -10rem;
-          transition: .1s ease-out;
           overflow: hidden;
           z-index: -1;
           height: 2.1875rem;
           opacity: 0;
+         
       
       }
       
-      .dropdown-content a {
-        color: black;
+      .dropdown-content .dbx-btn-link {
+        color: white;
         margin: 0.3125rem !important;
-        transform: translate(-0rem, -0.4375rem) scale(.5);
+        transform: translate(-0rem, -0.4375rem) scale(.3);
         padding: 0.75rem 1rem;
         text-decoration: none;
         display: flex;
@@ -67,28 +71,27 @@
         justify-content: space-between;
         flex-direction: row;
         background-color: #69d3aa;
-        border-radius: 1.875rem !important;
         margin: 0.3125rem 0rem;
-        transition: .2s ease-out;
         top: 0;
         left: 0;
-        transition: .2s ease-out;
         position: absolute;
+        height: 40px;
+        border-radius: 5px !important;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 47%), 0 2px 4px -1px rgb(0 0 0 / 23%);
       }
       
       .dropdown-content:hover {
         transition: .2s ease-out;
         opacity:1;
-        transition: .2s ease-out;
         overflow: hidden;
         z-index: 1;
-        top: -3.625rem;
+        top: -3.625rem!important;
         right:  -12.75rem;
         height: 10.3125rem;
         transform: translate(0rem, -0.6875rem) scale(1);
       }
       
-      .dbx-btn:hover ~ .dropdown-content a{
+      .dbx-btn:hover ~ .dropdown-content .dbx-btn-link{
         position: relative;
         transform: translate(0rem, 0rem) scale(1);
       }
@@ -99,21 +102,21 @@
         /* transition: .2s ease-out; */
         overflow: hidden;
         z-index: 1;
-        top: -3.625rem;
+        top: -3.625rem !important;
         right:  -12.75rem;
         height: 10.5rem;
         transform: translate(0rem, -0.6875rem) scale(1);
       }
       
 
-      .dropdown-content:hover  a {
+      .dropdown-content:hover  .dbx-btn-link {
         transform: translate(0rem, 0rem) scale(1);
         transition: .2s ease-out;
         position: relative;
       
       }
       
-      .dropdown-content a:hover {
+      .dropdown-content .dbx-btn-link:hover {
         background-color: #2196f3 !important;
         text-decoration: none !important;
         
