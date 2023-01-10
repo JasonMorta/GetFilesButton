@@ -64,14 +64,14 @@ for (let i = 0; i < data.length; i++) {
     "T0"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", ""):
     "T"+data[i].textContent.match(/[0-9]/g).join().replaceAll(",", "");
 
-      console.log('task: '+ student.task +' ',student.task.length);
+      //console.log('task: '+ student.task +' ',student.task.length);
 
     if ( student.task.length > 3) {
       student.task = student.task.slice(0,3)
       
     }
   }
-  console.log('sliced student.task', student.task)
+  //console.log('sliced student.task', student.task)
 }
 
 
@@ -109,50 +109,5 @@ let dropboxBtn = `
 data[3].insertAdjacentHTML("afterend", dropboxBtn);
 //https://www.dropbox.com/search/work?path=%2F&query=AD22110004876&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841
 //https://www.dropbox.com/search/work?path=%2F&query=CC22110005202&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=28751319532716572321479819181797
-
-// (async () => {
-//   let s_name = document.getElementById('s-name')
-//   console.log(s_name)
-//   const response = await chrome.runtime.sendMessage({send: student});
-//   // do something with response here, not outside the function
-// let res = response.send
-// console.count()
-// console.log('res.name', res.name)
-//   s_name.innerHTML = "hello" + res.name
-
-// })();
-
-
-// setTimeout(() => {
-//   console.log('student.name', student.name)
-//     //Get elements
-  
-//     let s_number = document.querySelector('#s-number')
-//     let s_level = document.querySelector('#s-level')
-//     let s_task = document.querySelector('#s-task')
- 
-
-// }, 200);
-
-
-
-
-
-//==========chrome extension
-
-// chrome.runtime.sendMessage(tabId, {
-//   type: "NEW",
-//   videoId: myVar,
-//   random: "random string"
-// })
-
-
-  
-  //chrome.runtime.sendMessage(student)
-
-          
-          // s_task.textContent = "Task: " + student.task;
-          // s_number.textContent = 13156165464
-  
 
   
