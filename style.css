@@ -60,16 +60,7 @@
         height: 160px;
         border-radius: 7px;
       }
-        /* .dropdown-content::before {
-                content: "";
-                position: absolute;
-                left: -126px;
-                height: 72px;
-                top: 42px;
-                z-index: 0;
-                width: 160px;
-                background-color: rgb(32, 51, 218);
-        } */
+
       .ddx-inner-container {
         /* background-color: orange; */
         height: inherit;
@@ -113,14 +104,14 @@
         }
 
         .dbx-btn-link{
-        transition: .2s;
+        transition: .2s ease-in-out;
         }
       
       .dropdown-content .dbx-btn-link:hover {
         /* background-color: #2196f3 !important; */
         text-decoration: none !important;
         box-shadow: 0 2px 3px -1px rgb(0 0 0 / 47%), 0 0px 2px -1px rgb(0 0 0 / 23%) !important;
-        transition: .2s;
+        transition: .2s ease-in;
         transform: translate(0px, 2px) !important;
         
       }
