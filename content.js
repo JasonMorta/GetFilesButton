@@ -90,27 +90,93 @@ let dropboxBtn = `
                     <a class="btn dbx-btn">Dropbox
                     </a>
                     <div class="dropdown-content">
-                      <a class="dbx-btn-link"   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
-                      <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}   target="_blank">Course Folder <span>(DFE only)</span></a>
-                      <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}/${student.task}`}   target="_blank">Task Folder <span>(DFE only)</span></a>
+                      <div class="ddx-inner-container">
+                        <a class="dbx-btn-link"   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
+                        <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}   target="_blank">Course Folder <span>(DFE only)</span></a>
+                        <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}/${student.task}`}   target="_blank">Task Folder <span>(DFE only)</span></a>
+                      </div>
                   </div>
   </div>`;
-
-
-//prev button
-// let dropboxBtn = `<a 
-//     class="btn bounce-top"
-//     title=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
-//     href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`} 
-//     target="_blank">
-//         OPEN DROPBOX
-// </a>`
-
-
-//console.log(data[3]);
 
 data[3].insertAdjacentHTML("afterend", dropboxBtn);
 //https://www.dropbox.com/search/work?path=%2F&query=AD22110004876&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841
 //https://www.dropbox.com/search/work?path=%2F&query=CC22110005202&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=28751319532716572321479819181797
 
   
+//========BTN hover effect
+
+let MainBtn = document.querySelector('.dbx-btn');
+let btnContainer = document.querySelector('.dropdown-content');
+let allLinks = document.querySelectorAll('.dbx-btn-link');
+let myTimeout = 0
+let leaveReverse = 0
+let leaveRemove = 0
+
+//adds the CSS to e  ach elements
+function loadBtns(){     
+  for (let i = 0; i < allLinks.length; i++) {
+    allLinks[i].style.animationDuration = `0.3${i-1}s`
+  }
+  } loadBtns()
+
+//On MainBtn hover, show other buttons
+MainBtn.addEventListener('mouseenter', (e)=> {
+  clearTimeout(myTimeout)
+  clearTimeout(leaveReverse)
+  clearTimeout(leaveRemove)
+  btnContainer.classList.add("show-dropdown")
+  for (let i = 0; i < allLinks.length; i++) {
+    allLinks[i].classList.remove("slide-in-left-reverse")
+    allLinks[i].classList.add("slide-in-left")
+  }
+})
+
+
+//Leave timeout
+//Only remove the container + buttons if mouse leaves everything
+btnContainer.addEventListener("mouseleave", () => {
+  leaveAll()
+});
+
+//Leaving main button 
+
+MainBtn.addEventListener('mouseleave', (e)=> {
+  leaveAll()
+})
+
+//leaving the buttons
+function leaveAll(){
+  leaveReverse = setTimeout(() => {
+    for (let i = 0; i < allLinks.length; i++) {
+      allLinks[i].classList.add("slide-in-left-reverse");
+    }
+  }, 1000);
+
+  leaveRemove = setTimeout(() => {
+    for (let i = 0; i < allLinks.length; i++) {
+      allLinks[i].classList.remove("slide-in-left-reverse");
+      allLinks[i].classList.remove("slide-in-left");
+      btnContainer.classList.remove("show-dropdown");
+      btnContainer.classList.remove("show-dropdown");
+    }
+  }, 1500);
+}
+
+//reEnter container
+btnContainer.addEventListener('mouseenter', ()=>{
+  console.log("reEnter");
+  clearTimeout(leaveReverse)
+  clearTimeout(leaveRemove)
+})
+
+//remove buttons when leaving button1 or other buttons
+function removeEl(){
+  for (let i = 0; i < allLinks.length; i++) {
+    btnContainer.classList.remove("show-dropdown")
+    allLinks[i].classList.remove("slide-in-left")
+      
+  }
+      setTimeout(() => {
+        btnContainer.style.display = "none"
+      }, 500);
+}
