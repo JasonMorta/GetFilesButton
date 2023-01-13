@@ -11,6 +11,10 @@ let student = {
     task: ""
 }
 
+let checkbox = document.querySelector('#dbx-checkbox')
+checkbox.addEventListener('click', (e)=>{
+console.log(e);
+})
 
 let studentNumber = "HM22100004151"
 
