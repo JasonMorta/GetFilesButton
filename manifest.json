@@ -11,7 +11,9 @@
     "content_scripts":[
         {
             "matches": ["https://*.hyperiondev.cogrammar.com/reviewer/generate_review/*", 
-            "https://*.hyperiondev.cogrammar.com/reviewer/generate_dfe_review/*"],
+            "https://*.hyperiondev.cogrammar.com/reviewer/generate_dfe_review/*",
+            "https://*.hyperiondev.cogrammar.com/reviewer/dashboard/*"
+        ],
             "js": ["./content.js"],
             "css": ["./style.css"]
         }

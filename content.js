@@ -180,3 +180,8 @@ function removeEl(){
         btnContainer.style.display = "none"
       }, 500);
 }
+
+// chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+//   console.log(tabs);
+ 
+// })
