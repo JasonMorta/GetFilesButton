@@ -1,5 +1,6 @@
 //Grab all the h2 element inner text
 
+
  
 //student data object
 // Content-script will scan the current tab about student and create a student object
@@ -181,7 +182,3 @@ function removeEl(){
       }, 500);
 }
 
-// chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-//   console.log(tabs);
- 
-// })

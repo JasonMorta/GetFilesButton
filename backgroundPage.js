@@ -1,3 +1,6 @@
-async function background(){
-//console.log("running the extension now");
-}background()
+
+console.log("chrome.tabs API");
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+  console.log(tabs);
+ 
+})
