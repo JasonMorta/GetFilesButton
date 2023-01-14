@@ -1,5 +1,5 @@
 
-# Student Dropbox Extension v1.0
+# Student Dropbox Button
 
 This extension adds a button to the review page.The button opens the student's dropbox folder,
 speeding up the process of needing to go to dropbox, and searching for the student's folder.
