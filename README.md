@@ -8,7 +8,7 @@ speeding up the process of needing to go to dropbox, and searching for the stude
 ## Installation
 
 ```bash
-1. Download the repo to your local machine.
+1. Download the repo to your localMachine.
 2. Unzip the repo content. 
 3. In your chrome browser go to option > More tools > Extensions.
 4. Select "Load Unpacked", and navigate to the unzipped repo folder > Select Folder.
