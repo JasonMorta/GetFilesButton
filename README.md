@@ -16,18 +16,22 @@ speeding up the process of needing to go to dropbox, and searching for the stude
 ```
 #### When on the review page, the button will automatically appear.
     
-## ATTENTION!
+## Usage
 
-#### This is still an early release. More updates will be made.
+### Current main features are:
+- Collect all the student information from the review page.
+- Extension popup **checkbox**: automatically opens the "Find Student" link when the review page has loaded.
+- Adds a dropbox button to the review page.
+- Button has 3 options: 
+1. **Find Student**: Opens dropbox and makes a search for the student number.
+2. **Course Folder**: Redirects to students bootcamp folder.
+3. **Task folder**:  Redirects into the student task folder.
+Option 2-3 will only work with DFE student files that have no levels.
 
-- The button will only work with DFE student numbers. 
-- Sometimes the link won't work, because of non-existing student numbers, multiple student folders, and different folder names.
-- The button uses a hardcoded URL path name. 
-- ​If you get an error, you'll have to find the student files manually.
 
 ## Tech Stack
 
-**Client:** HTML/CSS, JavaScript, Chrome API
+**Client:** HTML/CSS, JavaScript, ChromeAPI
 
 
 ## License
