@@ -1,11 +1,11 @@
 
-# Student Dropbox Extension v1.0
+## Student Dropbox Button: Chrome Extension
 
 This extension adds a button to the coGrammar review page.The button opens the current student's dropbox folder,
 speeding up the process of needing to go to dropbox, and searching for the student's folder.
 
 
-## Installation
+### Installation
 
 ```bash
 1. Download the repo to your localMachine.
@@ -16,7 +16,7 @@ speeding up the process of needing to go to dropbox, and searching for the stude
 ```
 #### When on the review page, the button will automatically appear.
     
-## Usage
+### Usage
 
 ### Current main features are:
 - Collect all the student information from the review page.
@@ -30,12 +30,12 @@ speeding up the process of needing to go to dropbox, and searching for the stude
 Option 2-3 will only work with DFE student files that have no levels.
 
 
-## Tech Stack
+### Tech Stack
 
 **Client:** HTML/CSS, JavaScript, ChromeAPI
 
 
-## License
+### License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
