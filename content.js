@@ -1,4 +1,4 @@
-//Grab all the h2 element inner text
+//This JS file will effect any current tab/web-page being visited
 
 
  
@@ -11,10 +11,32 @@ let student = {
     task: ""
 }
 
-let checkbox = document.querySelector('#dbx-checkbox')
-checkbox.addEventListener('click', (e)=>{
-console.log(e);
-})
+
+
+
+
+
+
+/* Adds hover effect to reviewer dashboard table rows */
+ function getData() {
+  let rows = document.querySelectorAll("tr");
+  let path = window.location.href//only add effect to dashboard table
+ 
+  if (path.includes("cogrammar.com/reviewer/dashboard")) {
+      for (let i = 0; i < rows.length; i++) {
+     
+       rows[i].classList.add("tr-hover")
+
+      }}
+  }getData()
+
+
+
+
+
+
+
+
 
 let studentNumber = "HM22100004151"
 
@@ -33,7 +55,7 @@ let IP = /Intro to Programming/i
 
 //All student info is in all the h2 elements
 const data = document.getElementsByTagName("h6");
-//console.log(data);
+console.log(data);
 //console.log('data', data)
 
 //loop over all the h6 elements and extract the needed info to build student variable
@@ -96,7 +118,7 @@ let dropboxBtn = `
                     </a>
                     <div class="dropdown-content">
                       <div class="ddx-inner-container">
-                        <a class="dbx-btn-link"   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
+                        <a class="dbx-btn-link main-btn"   href=${`https://www.dropbox.com/search/work?path=%2F&query=${student.number}&search_token=wSE2j02tt%2BEzn4Mn5LKCeJ6lTfohi%2BvZxO8aR6zgwL4%3D&typeahead_session_id=13067744558951506456428331496841`}  target="_blank"  >Find Student <span>(All)</span></a>
                         <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}`}   target="_blank">Course Folder <span>(DFE only)</span></a>
                         <a class="dbx-btn-link"  href=${`https://www.dropbox.com/work/HyperionDev%20Reviewers/${student.number}/${student.course.replaceAll(" ", "%20")}/${student.task}`}   target="_blank">Task Folder <span>(DFE only)</span></a>
                       </div>
@@ -185,4 +207,18 @@ function removeEl(){
         btnContainer.style.display = "none"
       }, 500);
 }
+
+//Open student founder automatically if popup check is true
+
+async function getCheckedValues() {
+  console.log(await chrome.storage);
+ await chrome.storage.local.get("openStudentFolder").then((result) => {
+  console.log('result', result.openStudentFolder)
+   if (result.openStudentFolder == true) {
+    setTimeout(() => {
+      document.querySelector('.main-btn').click()
+    }, 500);
+   }
+  });
+}getCheckedValues()
 
