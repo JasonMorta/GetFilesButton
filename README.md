@@ -21,6 +21,7 @@ speeding up the process of needing to go to dropbox, and searching for the stude
 ### Current main features are:
 - Collect all the student information from the review page.
 - Extension popup **checkbox**: automatically opens the "Find Student" link when the review page has loaded.
+![App Screenshot](https://github.com/JasonMorta/GetFilesButton/blob/main/screenshots/aOpen.png)  
 - Adds a dropbox button to the review page.
 - Button has 3 options: 
 1. **Find Student**: Opens dropbox and makes a search for the student number.
@@ -37,4 +38,6 @@ Option 2-3 will only work with DFE student files that have no levels.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+ 
 
