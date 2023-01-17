@@ -4,11 +4,11 @@
 <head>
   
    <meta charset="UTF-8">
+   <script src="./Dropbox-sdk.min.js"></script>
    <link href="/style.css" rel="stylesheet" type="text/css">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="./jquery.min.js"></script>
-   <script src="popup.js" defer> </script>
+   <script src="./popup.js" defer> </script>
    <title>Document</title>
 </head>
 
@@ -16,17 +16,20 @@
 <body class="my-body">
 
 <ul class="my-ul">
-   <li><b>Student dropbox - beta version</b></li>
+   <li><b>Student Dropbox</b></li>
    <li>Runs automatically when review page has loaded.</li>
-   <li>This extension uses the student information on the review page to create an URL link to dropbox</li>
-   <li><b>Find Student</b>: does a normal search for the students dropbox folder. If student bootcamp has more then one level, use this option. </li>
+   <li>Each button opens in a new tab.</li>
+   <li>This extension uses the student information on the review page to create a hardcoded URL link to dropbox</li>
+   <li><b>Find Student</b> button, opens dropbox and does a search on the current student number.</li>
    <li><b>Other buttons</b>: Works with dfe single level bootcamp only.</li>
+   <li><a href="https://github.com/JasonMorta/GetFilesButton" target="_black">Check for updates</a></li>
 </ul>
 
 <input type="checkbox" id="dbx-checkbox" name="mainFolder">
-<label for="mainFolder">Open "Find Student" automatically</label>
+<label for="mainFolder">Open "Find Student" link automatically in a new tab.</label>
 
 <script src="./content.js"></script>
+<script src="./dropboxAPI.js"></script>
 </body>
 
 </html>
