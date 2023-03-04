@@ -11,12 +11,6 @@ let student = {
     task: ""
 }
 
-
-
-
-
-
-
 /* Adds hover effect to reviewer dashboard table rows */
  function getData() {
   let rows = document.querySelectorAll("tr");
@@ -29,13 +23,6 @@ let student = {
 
       }}
   }getData()
-
-
-
-
-
-
-
 
 
 let studentNumber = "HM22100004151"
@@ -84,8 +71,6 @@ for (let i = 0; i < data.length; i++) {
   } else if (IP.test(data[i].textContent)) {
     student.course = "1%20-%20Introduction%20to%20programming";
   }
-
-
 
   //Get student task number
   if (data[i].textContent.search("Task:") != -1) {
@@ -222,4 +207,6 @@ async function getCheckedValues() {
    }
   });
 }getCheckedValues()
+
+
 
