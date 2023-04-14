@@ -42,7 +42,6 @@ let IP = /Intro to Programming/i
 
 //All student info is in all the h2 elements
 const data = document.getElementsByTagName("h6");
-console.log(data);
 //console.log('data', data)
 
 //loop over all the h6 elements and extract the needed info to build student variable
@@ -177,7 +176,7 @@ function leaveAll(){
 
 //reEnter container
 btnContainer.addEventListener('mouseenter', ()=>{
-  console.log("reEnter");
+
   clearTimeout(leaveReverse)
   clearTimeout(leaveRemove)
 })
@@ -197,9 +196,7 @@ function removeEl(){
 //Open student founder automatically if popup check is true
 
 async function getCheckedValues() {
-  console.log(await chrome.storage);
  await chrome.storage.local.get("openStudentFolder").then((result) => {
-  console.log('result', result.openStudentFolder)
    if (result.openStudentFolder == true) {
     setTimeout(() => {
       document.querySelector('.main-btn').click()
