@@ -62,7 +62,7 @@ for (let i = 0; i < data.length; i++) {
   if (DS.test(data[i].textContent)) {
     student.course = "Data Science Bootcamp";
   } else if (SE.test(data[i].textContent)) {
-    student.course = "Software Engineer Bootcamp";
+    student.course = encodeURI("Software Engineering (Fundamentals)");
   } else if (WD.test(data[i].textContent)) {
     student.course = "Web Development Bootcamp";
   } else if (PDS.test(data[i].textContent)) {
