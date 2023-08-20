@@ -193,7 +193,7 @@ function removeEl(){
       }, 500);
 }
 
-//Open student founder automatically if popup check is true
+//Open student folder automatically if popup check is true
 
 async function getCheckedValues() {
  await chrome.storage.local.get("openStudentFolder").then((result) => {
